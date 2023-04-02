@@ -50,3 +50,21 @@ Solution:
     return arr.length === 0;
 };
   ```
+  ##
+  
+  ### Question 3
+  <img width="546" alt="Screenshot 2023-04-01 223723" src="https://user-images.githubusercontent.com/80487497/229331559-25e65a37-75f1-4cb4-9590-111ef348848f.png">
+
+Solution:
+  ```javascript
+   var maxProfit = function(prices) {
+    let min = prices[0]
+    let maxProfit = 0
+    for (let i = 1; i < prices.length; i++) {
+        min = Math.min(min,prices[i])
+        maxProfit = Math.max(maxProfit,prices[i] - min)
+    }
+
+    return maxProfit;
+};
+  ```
